@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.example.service.impl;
+package com.pravin.service.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -9,9 +9,9 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.entity.Employee;
-import com.example.repo.EmployeeRepo;
-import com.example.service.EmployeeService;
+import com.pravin.entity.Employee;
+import com.pravin.repo.EmployeeRepo;
+import com.pravin.service.EmployeeService;
 
 /**
  * @author pravinBhoyar

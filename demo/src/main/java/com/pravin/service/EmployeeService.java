@@ -1,11 +1,11 @@
 /**
  * 
  */
-package com.example.service;
+package com.pravin.service;
 
 import java.util.List;
 
-import com.example.entity.Employee;
+import com.pravin.entity.Employee;
 
 /**
  * @author PravinBhoyar

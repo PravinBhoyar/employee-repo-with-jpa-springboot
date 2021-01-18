@@ -1,4 +1,4 @@
-package com.example.entity;
+package com.pravin.entity;
 
 import java.io.Serializable;
 
@@ -8,13 +8,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Employee implements Serializable{
-	
+public class Employee implements Serializable {
+
 	/**
+	 * @author PravinBhoyar
 	 * serialVersionUID
 	 */
 	private static final long serialVersionUID = -1845088450167173456L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -23,9 +24,9 @@ public class Employee implements Serializable{
 	private String country;
 	private String address;
 	private Integer age;
-	
+
 	public Employee() {
-		
+
 	}
 
 	/**
@@ -166,6 +167,15 @@ public class Employee implements Serializable{
 			return false;
 		return true;
 	}
-	
-	
+
+	public Employee(Long id, String employee_name, String city, String country, String address, Integer age) {
+		super();
+		this.id = id;
+		this.employee_name = employee_name;
+		this.city = city;
+		this.country = country;
+		this.address = address;
+		this.age = age;
 	}
+
+}

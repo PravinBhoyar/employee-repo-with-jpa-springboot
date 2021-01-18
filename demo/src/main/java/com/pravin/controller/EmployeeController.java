@@ -1,5 +1,5 @@
 
-package com.example.controller;
+package com.pravin.controller;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.entity.Employee;
-import com.example.service.EmployeeService;
+import com.pravin.entity.Employee;
+import com.pravin.service.EmployeeService;
 
 /**
  * @author PravinBhoyar
@@ -22,25 +22,38 @@ import com.example.service.EmployeeService;
  */
 @RestController
 @RequestMapping("/employee")
-public class DemoController {
+public class EmployeeController {
 	
 	@Autowired
 	EmployeeService employeeService;
 	
 	List<Employee> list = new ArrayList<Employee>();
-	Employee emp ;
 	
+	/**
+	 * 
+	 * @return
+	 */
 	@GetMapping("/test")
 	public String hello() {
 		return "Hello world";
 	}
 	
+	
+	/**
+	 * 
+	 * @return
+	 */
 	@GetMapping("/getallemployee")
 	public ResponseEntity<List<Employee>> getAllEmployeeDetails(){
 		List<Employee> list = employeeService.getAllEmployee();
 		return new ResponseEntity<List<Employee>>(list, new HttpHeaders(), HttpStatus.OK);
 	}
 	
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 */
 	@GetMapping("/getbyemployeeid/{id}")
 	public ResponseEntity<Employee> getByEmployeeId(@PathVariable("id") Long id){
 		Employee emp = employeeService.getByEmployeeId(id);
